@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class InitialiseOwnerCard : MonoBehaviour {
 
     public Text ownerName, safeCode;
-    public Text[] clues = new Text[6];
+    public Text likes;
+    public Text dislikes;
 
     // Use this for initialization
     private void Awake()
@@ -14,14 +15,11 @@ public class InitialiseOwnerCard : MonoBehaviour {
         
     }
 
-    public void FillData(string ownerText, string clueText, string safeCodeText)
+    public void FillData(string ownerText, string likesText, string dislikesText, string safeCodeText)
     {
-        for(int i = 0; i < clues.Length; i++)
-        {
             ownerName.text = ownerText;
             safeCode.text = safeCodeText;
-            clues[i].text = clueText;
-
-        }
+            likes.text = "Likes: " + likesText;
+            dislikes.text = "Dislikes: " + dislikesText;
     }
 }

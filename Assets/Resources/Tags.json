@@ -1,0 +1,59 @@
+﻿[
+  {
+    "Name": "Monster"
+  },
+  {
+    "Name": "Food"
+  },
+  {
+    "Name": "Drink"
+  },
+  {
+    "Name": "SciFi"
+  }
+  {
+    "Name": "Fantasy"
+  }
+  {
+    "Name": "RPG"
+  }
+  {
+    "Name": "Racing"
+  }
+  {
+    "Name": "Action"
+  }
+  {
+    "Name": "Sausage"
+  }
+  {
+    "Name": "Garlic"
+  }
+  {
+    "Name": "Yeast"
+  }
+  {
+    "Name": "Sun"
+  }
+  {
+    "Name": "Moon"
+  }
+  {
+    "Name": "UFO"
+  }
+  {
+    "Name": "Kermit"
+  }
+  {
+    "Name": "Fox"
+  }
+  {
+    "Name": "Animal"
+  }
+  {
+    "Name": "Bottle"
+  }
+  {
+    "Name": "Apple"
+  }
+]
