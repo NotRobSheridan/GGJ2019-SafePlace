@@ -1,25 +1,34 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
+RobsBranch
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using WhoLivesInThisHouse;
 
-//public class HostPlaySceneManager : MonoBehaviour {
-//    public int maxObjects;
-//    public List<GameObject> interactablePositions = new List<GameObject>();
+public class HostPlaySceneManager : MonoBehaviour {
+    public int maxObjects;
+    public Transform[] interactables = new Transform[8];
+    private GameContext gameContext;
+    
 
-//    void OnAwake()
-//    {
-//        for(int i = 0; i < maxObjects; i++)
-//        {
-//            InstantiateInteractable(incomingData.items[i]); //Iterate through objects to instantiate from deserialized JSON until we have enough objects in the scene
-//        }
-//    }
+    void OnAwake()
+    {
 
-//    void InstantiateInteractable(string interactablename)
-//    {
-//        int spawnId = Random.Range(0, interactablePositions.Count);
-//        GameObject obj = (GameObject)Instantiate(Resources.Load(interactablename), interactablePositions[spawnId].transform);
-//    }
+        gameContext = GameContext.Instance;
 
-//    }
-//
-//}
+        foreach(Item item in gameContext.CurrentRoom.Items)
+        {
+            InstantiateItem(item.Name, item.UiBinding);
+            Debug.Log(item.Name);
+            Debug.Log(item.Name);
+        }
+
+    }
+
+    void InstantiateItem(string itemName, string spawnLocation)
+    {
+        Transform target = GameObject.FindWithTag("SpawnLocation").transform;
+        GameObject obj = (GameObject)Instantiate(Resources.Load(itemName), target.transform);
+    }
+
+
+}
