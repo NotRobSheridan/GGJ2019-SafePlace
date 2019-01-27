@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-    
+using WhoLivesInThisHouse;
+
+
 public class ClientStartup : MonoBehaviour {
 
     public int maxOwners;
@@ -14,6 +16,7 @@ public class ClientStartup : MonoBehaviour {
 
     private void Awake()
     {
+   
         for (int i = 0; i < maxOwners; i++)
         {
             //Data from JSON goes here? 
