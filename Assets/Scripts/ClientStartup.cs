@@ -1,32 +1,46 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using WhoLivesInThisHouse;
-
 
 public class ClientStartup : MonoBehaviour {
 
     public int maxOwners;
     public GameObject cardCanvas;
     public GameObject ownerCard;
-    RectTransform lastCardPos;
-
-
+    private CharacterListApiCaller apiCaller;
 
     private void Awake()
     {
-   
-        for (int i = 0; i < maxOwners; i++)
+        apiCaller = new CharacterListApiCaller("http://192.168.1.95:9595");
+
+        List<Character> characters = apiCaller.GetCharacters();
+
+        foreach (Character character in characters)
         {
-            //Data from JSON goes here? 
-            //field = newFieldValueFromJason?
-            CreateCard();
+            Debug.Log(character);
+            CreateCard(character.Name, character.LikeTags, character.DislikeTags, character.SafeCode);
         }
     }
 
-    void CreateCard()
+    void CreateCard(string charName, List<Tag> likes, List<Tag> dislikes, string safe)
     {
         GameObject newCard = Instantiate(ownerCard, transform) as GameObject;
+        var cardScript = newCard.GetComponent<InitialiseOwnerCard>();
+
+        string likesStr = "";
+        string dislikesStr = "";
+
+        foreach(Tag like in likes)
+        {
+            likesStr += like.Name + "\n";
+        }
+
+        foreach (Tag dislike in dislikes)
+        {
+            dislikesStr += dislike.Name + "\n";
+            Debug.Log(dislikesStr);
+        }
+
+        cardScript.FillData(charName, likesStr, dislikesStr, safe);
     }
 }

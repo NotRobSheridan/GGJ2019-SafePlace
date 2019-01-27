@@ -5,7 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fridge
-  - Shelf1
+  - TV
+  - Fireplace
+  - Gramaphone
+  - PictureFrame
+  - Curtains
+  - Toilet
+  - Bookshelf
   layers:
   - Default
   - TransparentFX

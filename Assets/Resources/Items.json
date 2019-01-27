@@ -1,0 +1,114 @@
+﻿[
+  {
+    'name': 'GhostCow',
+    'uiBinding': 'Fireplace',
+    'tags': [
+      'Spooky',
+      'Animal'
+    ]
+  },
+  {
+    'name': 'Sausages',
+    'uiBinding': 'Fridge',
+    'tags': [
+      'Meat',
+      'Food'
+    ]
+  },
+  {
+    'name': 'Garlic',
+    'uiBinding': 'Fridge',
+    'tags': [
+      'Veg',
+      'Food'
+    ]
+  },
+  {
+    'name': 'Moon',
+    'uiBinding': 'Window',
+    'tags': [
+      'Night',
+      'Nature'
+    ]
+  },
+  {
+    'name': 'Apple',
+    'uiBinding': 'Fridge',
+    'tags': [
+      'Food',
+      'Fruit'
+    ]
+  },
+  {
+    'name': 'ScrotalReball',
+    'uiBinding': 'TV',
+    'tags': [
+      'Film',
+      'SciFi'
+    ]
+  },
+  {
+    'name': 'CodOfWar',
+    'uiBinding': 'TV',
+    'tags': [
+      'Game',
+      'Action'
+    ]
+  },
+  {
+    'name': 'Bottle',
+    'uiBinding': 'Bookshelf',
+    'tags': [
+      'Drink',
+      'Alcohol'
+    ]
+  },
+  {
+    'name': 'Nessie',
+    'uiBinding': 'Toilet',
+    'tags': [
+      'Monster',
+      'Scotland'
+    ]
+  },
+  {
+    'name': 'YeastPaste',
+    'uiBinding': 'Toilet',
+    'tags': [
+      'Food',
+      'Paste'
+    ]
+  },
+  {
+    'name': 'Kermit',
+    'uiBinding': 'Toilet',
+    'tags': [
+      'Monster',
+      'Green'
+    ]
+  },
+  {
+    'name': 'Sun',
+    'uiBinding': 'Window',
+    'tags': [
+      'Weather',
+      'Day'
+    ]
+  },
+  {
+    'name': 'CodOfWar',
+    'uiBinding': 'TV',
+    'tags': [
+      'Game',
+      'Action'
+    ]
+  },
+  {
+    'name': 'EastWorld',
+    'uiBinding': 'TV',
+    'tags': [
+      'Show',
+      'SciFI'
+    ]
+  }
+]

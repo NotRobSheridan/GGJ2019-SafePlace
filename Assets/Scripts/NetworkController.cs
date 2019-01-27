@@ -6,14 +6,21 @@ using WhoLivesInThisHouse;
 public class NetworkController : MonoBehaviour
 {
     private GameContext gameContext;
+    JsonFileLoader jsonFileLoader = new JsonFileLoader();
 
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Starting game server");
         gameContext = GameContext.Instance;
+        //Debug.Log(gameContext.ServerUrl);
 
-        string json = @"[{
+
+        DontDestroyOnLoad(this.gameObject);
+
+        string json = jsonFileLoader.LoadJsonFile("items");
+
+            /*@"[{
               'name': 'Test1',
               'tags': [
                 'tag1',
@@ -26,7 +33,7 @@ public class NetworkController : MonoBehaviour
                 'tag3',
                 'tag4'
               ]
-            }]";
+            }]";*/
 
         gameContext.Init(json);
         gameContext.NewGame(6);
