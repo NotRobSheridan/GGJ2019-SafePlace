@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/ClientStartScene.unity
+    path: Assets/Scenes/ClientPlayScene.unity
     guid: 495623931182445f5ad610e4c52c0e8f
+  - enabled: 1
+    path: Assets/Scenes/ClientStartScene.unity
+    guid: bc0695f0683f5460aaae7591ba3faa97
+  - enabled: 1
+    path: Assets/Scenes/HostPlayScene.unity
+    guid: 02d96fef427c143dbab0cb6a4e139b85
+  - enabled: 1
+    path: Assets/Scenes/HostStartScene.unity
+    guid: c2646a3ae1db648a49d400aaca9a7ba7
   m_configObjects: {}

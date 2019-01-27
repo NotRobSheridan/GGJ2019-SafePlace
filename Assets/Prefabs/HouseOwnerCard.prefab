@@ -251,14 +251,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b236a7a4d15419c93e95ea6ed218a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clue1: {fileID: 114362056201824280}
-  clue2: {fileID: 114273102083698910}
-  clue3: {fileID: 114724268222215556}
-  clue4: {fileID: 114308892402259940}
-  clue5: {fileID: 114424346257344410}
-  clue6: {fileID: 114633925100160178}
   ownerName: {fileID: 114842274252040468}
   safeCode: {fileID: 114377223730766402}
+  clues:
+  - {fileID: 114362056201824280}
+  - {fileID: 114273102083698910}
+  - {fileID: 114724268222215556}
+  - {fileID: 114308892402259940}
+  - {fileID: 114424346257344410}
+  - {fileID: 114633925100160178}
 --- !u!114 &114225744664693318
 MonoBehaviour:
   m_ObjectHideFlags: 1

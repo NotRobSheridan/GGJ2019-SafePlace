@@ -5,20 +5,23 @@ using UnityEngine.UI;
 
 public class InitialiseOwnerCard : MonoBehaviour {
 
-    public Text clue1, clue2, clue3, clue4, clue5, clue6, ownerName, safeCode;
-
+    public Text ownerName, safeCode;
+    public Text[] clues = new Text[6];
 
     // Use this for initialization
     private void Awake()
     {
-        clue1.text = Random.Range(0, 10000).ToString();
-        clue2.text = Random.Range(0, 10000).ToString();
-        clue3.text = Random.Range(0, 10000).ToString();
-        clue4.text = Random.Range(0, 10000).ToString();
-        clue5.text = Random.Range(0, 10000).ToString();
-        clue6.text = Random.Range(0, 10000).ToString();
-        ownerName.text = "Name: " + Random.Range(0, 10000).ToString();
-        safeCode.text = "Code: " + Random.Range(1000, 4000).ToString();
+        
+    }
 
+    public void FillData(string ownerText, string clueText, string safeCodeText)
+    {
+        for(int i = 0; i < clues.Length; i++)
+        {
+            ownerName.text = ownerText;
+            safeCode.text = safeCodeText;
+            clues[i].text = clueText;
+
+        }
     }
 }

@@ -13,6 +13,8 @@ public class NetworkController : MonoBehaviour
         Debug.Log("Starting game server");
         gameContext = GameContext.Instance;
 
+        DontDestroyOnLoad(this.gameObject);
+
         string json = @"[{
               'name': 'Test1',
               'tags': [
@@ -36,6 +38,7 @@ public class NetworkController : MonoBehaviour
         Debug.Log(gameContext.Characters[3]);
         Debug.Log(gameContext.Characters[4]);
         Debug.Log(gameContext.Characters[5]);
+        Debug.Log(gameContext.Characters[6]);
     }
 
     /// <summary>
