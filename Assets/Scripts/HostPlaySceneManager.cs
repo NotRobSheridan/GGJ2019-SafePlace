@@ -5,14 +5,14 @@ using WhoLivesInThisHouse;
 
 public class HostPlaySceneManager : MonoBehaviour {
     public int maxObjects;
-    public Transform[] interactables = new Transform[8];
     private GameContext gameContext;
     
 
-    void OnAwake()
+    void Start()
     {
 
         gameContext = GameContext.Instance;
+        Debug.Log(gameContext.CurrentRoom.Items);
 
         foreach(Item item in gameContext.CurrentRoom.Items)
         {
@@ -25,7 +25,7 @@ public class HostPlaySceneManager : MonoBehaviour {
 
     void InstantiateItem(string itemName, string spawnLocation)
     {
-        Transform target = GameObject.FindWithTag("SpawnLocation").transform;
+        Transform target = GameObject.FindWithTag(spawnLocation).transform;
         GameObject obj = (GameObject)Instantiate(Resources.Load(itemName), target.transform);
     }
 

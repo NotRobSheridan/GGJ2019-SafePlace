@@ -38,7 +38,6 @@ public class ClientStartup : MonoBehaviour {
         foreach (Tag dislike in dislikes)
         {
             dislikesStr += dislike.Name + "\n";
-            Debug.Log(dislikesStr);
         }
 
         cardScript.FillData(charName, likesStr, dislikesStr, safe);
